@@ -50,9 +50,13 @@ public class Airport {
         return new Passenger(name, contactInfo, id);
     }
 
-//    public int createId(){
-//        
-//    }
+    public int createId(){
+        int passengerCount = 0;
+        for(Flight flight : this.flights){
+            passengerCount += flight.getPassengers().size();
+        }
+        return passengerCount + 1;
+    }
 
 
 }

@@ -8,9 +8,12 @@ public class Runner {
         Flight flight1 = new Flight("NYC", 1);
         Flight flight2 = new Flight("Dublin", 2);
         Flight flight3 = new Flight("Paris", 3);
+        Flight flight4 = new Flight("Dublin", 4);
         airport.addNewFlight(flight1);
         airport.addNewFlight(flight2);
         airport.addNewFlight(flight3);
+        airport.addNewFlight(flight4);
+
 
         Scanner scanner = new Scanner(System.in);
 
@@ -18,7 +21,7 @@ public class Runner {
         String passengerName = scanner.nextLine();
         System.out.println("Enter your phone number: ");
         String contactInfo = scanner.nextLine();
-        int passengerID = 1;
+        int passengerID = airport.createId();
 
         Passenger passenger1 = airport.newPassenger(passengerName, contactInfo, passengerID);
 
