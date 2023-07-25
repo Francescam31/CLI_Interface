@@ -2,12 +2,12 @@ public class Passenger {
 
     private String name;
     private String contactInfo;
-    private int uniqueId;
+    private int id;
 
-    public Passenger(String name, String contactInfo, int uniqueId) {
+    public Passenger(String name, String contactInfo, int id) {
         this.name = name;
         this.contactInfo = contactInfo;
-        this.uniqueId = uniqueId;
+        this.id = id;
     }
 
     public String getName() {
@@ -26,11 +26,13 @@ public class Passenger {
         this.contactInfo = contactInfo;
     }
 
-    public int getUniqueId() {
-        return this.uniqueId;
+    public int getid() {
+        return this.id;
     }
 
     public void setUniqueId(int uniqueId) {
-        this.uniqueId = uniqueId;
+        this.id = id;
     }
+    
+   
 }

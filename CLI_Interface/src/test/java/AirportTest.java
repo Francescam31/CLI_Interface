@@ -37,7 +37,7 @@ class AirportTest {
 
     @Test
     void bookPassengerOnFlight() {
-        airport.bookPassengerOnFlight(passenger,flight);
+        airport.bookPassengerOnFlight(passenger,"Dublin");
         assertThat(flight.getPassengers().size()).isEqualTo(1);
         assertThat(airport.getFlights().size()).isEqualTo(1);
 

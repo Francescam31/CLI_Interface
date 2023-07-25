@@ -3,12 +3,12 @@ import java.util.ArrayList;
 public class Flight {
 
     private String destination;
-    private int flightID;
+    private int id;
     private ArrayList<Passenger> passengers;
 
-    public Flight(String destination, int flightID) {
+    public Flight(String destination, int id) {
         this.destination = destination;
-        this.flightID = flightID;
+        this.id = id;
         this.passengers = new ArrayList<>();
     }
 
@@ -21,11 +21,11 @@ public class Flight {
     }
 
     public int getFlightID() {
-        return this.flightID;
+        return this.id;
     }
 
-    public void setFlightID(int flightID) {
-        this.flightID = flightID;
+    public void setFlightID(int id) {
+        this.id = id;
     }
 
     public ArrayList<Passenger> getPassengers() {

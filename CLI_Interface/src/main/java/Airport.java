@@ -30,13 +30,29 @@ public class Airport {
         this.flights.remove(flight);
     }
 
-    public void bookPassengerOnFlight(Passenger passenger, Flight flight){
-        flight.addPassenger(passenger);
+    public boolean bookPassengerOnFlight(Passenger passenger, String destination){
+        for(Flight flight : this.flights){
+            if(flight.getDestination().equals(destination)){
+                flight.addPassenger(passenger);
+                return true;
+            }
+        }
+        return false;
     }
 
-    public ArrayList<Flight> displayAllFlights(){
-        return this.flights;
+    public void displayAllFlights(){
+        for(Flight flight : this.flights){
+            System.out.println("Flight " + flight.getFlightID() + " to " + flight.getDestination());
+        }
     }
+
+    public Passenger newPassenger(String name, String contactInfo, int id){
+        return new Passenger(name, contactInfo, id);
+    }
+
+//    public int createId(){
+//        
+//    }
 
 
 }
